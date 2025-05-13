@@ -6,7 +6,7 @@ export default defineConfig(({ command }) => {
   const isDev = command === "serve";
 
   return {
-    root: isDev ? "examples" : ".", // <--- Use examples as root only for dev
+    root: isDev ? "examples" : ".",
     plugins: [react()],
     resolve: {
       alias: {
@@ -16,7 +16,7 @@ export default defineConfig(({ command }) => {
     build: {
       outDir: "dist",
       lib: {
-        entry: path.resolve(__dirname, "src/index.ts"),
+        entry: path.resolve(__dirname, "src/AutoSizeInput.tsx"),
         name: "AutoSizeInputReact",
         fileName: (format) => `autosize-input-react.${format}.js`,
       },
